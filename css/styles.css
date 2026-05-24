@@ -1,4 +1,4 @@
-/* Base styles */
+/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -12,25 +12,28 @@ body {
     line-height: 1.6;
 }
 
+/* HEADER */
 .site-header {
     background-color: #1a1a1a;
     padding: 2rem 5%;
     overflow: hidden;
 }
 
-.logo-area {
+.logo-area,
+.title-area {
     float: left;
+}
+
+.logo-area {
     width: 20%;
     text-align: center;
 }
 
 .logo {
     max-width: 80%;
-    height: auto;
 }
 
 .title-area {
-    float: left;
     width: 75%;
     padding-left: 3%;
 }
@@ -44,23 +47,24 @@ body {
 .tagline {
     font-family: "Montserrat", Arial, sans-serif;
     font-size: 1.1rem;
-    color: #f5f5f5;
 }
 
-/* Clear floats after header */
-.site-header::after {
+/* CLEAR FLOATS */
+.site-header::after,
+.hero-box::after,
+.villain-wrapper::after,
+.hashira-content::after {
     content: "";
     display: block;
     clear: both;
 }
 
-/* Bento container */
+/* BENTO CONTAINER */
 .bento-container {
     width: 90%;
     margin: 3rem auto;
 }
 
-/* Bento boxes */
 .bento-box {
     background-color: #1a1a1a;
     border: 0.15rem solid #8b0000;
@@ -69,98 +73,77 @@ body {
     margin-bottom: 2rem;
 }
 
-/* Hero box */
-.hero-box {
-    overflow: hidden;
+/* HERO */
+.hero-image-wrapper,
+.hero-text {
+    float: left;
 }
 
 .hero-image-wrapper {
-    float: left;
     width: 40%;
 }
 
 .hero-image {
     width: 100%;
-    height: auto;
     border-radius: 0.6rem;
 }
 
 .hero-text {
-    float: left;
     width: 55%;
     margin-left: 5%;
 }
 
 .hero-text h2 {
-    font-family: "Oswald", Arial, sans-serif;
+    font-family: "Oswald";
     font-size: 2rem;
     margin-bottom: 1rem;
 }
 
-.hero-text p {
-    font-size: 1rem;
-}
-
-/* Clear floats in hero */
-.hero-box::after {
-    content: "";
-    display: block;
-    clear: both;
-}
-
-/* Characters box */
-.characters-box h2 {
-    font-family: "Oswald", Arial, sans-serif;
+/* TITLES */
+.characters-box h2,
+.villains-box h2,
+.hashira-box h2,
+.episodes-box h2,
+.gallery-box h2 {
+    font-family: "Oswald";
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
     text-align: center;
 }
 
+/* CHARACTER CARDS */
 .character {
     display: inline-block;
-    vertical-align: top;
     width: 45%;
     margin: 1rem 2%;
     background-color: #0b3d2e;
     border-radius: 0.6rem;
     padding: 1.5rem;
+    vertical-align: top;
 }
 
-.character-image {
+.character h3 {
+    font-family: "Montserrat";
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+/* UNIFICACIÓN DE TODAS LAS IMÁGENES */
+.character-image,
+.villain-image,
+.hashira-image,
+.gallery-image {
     width: 100%;
-    height: 30rem;
+    height: 20rem;
     object-fit: cover;
     border-radius: 0.6rem;
     margin-bottom: 1rem;
 }
 
-.character h3 {
-    font-family: "Montserrat", Arial, sans-serif;
-    font-size: 1.3rem;
-    margin-bottom: 0.5rem;
-}
-
-.character p {
-    font-size: 0.95rem;
-}
-
-/* Villains box */
-.villains-box h2 {
-    font-family: "Oswald", Arial, sans-serif;
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-}
-
-.villain-wrapper {
-    overflow: hidden;
-}
-
+/* VILLAIN */
 .villain-image {
     float: left;
     width: 35%;
-    height: 15rem;
-    object-fit: cover;
-    border-radius: 0.6rem;
 }
 
 .villain-text {
@@ -169,112 +152,47 @@ body {
     margin-left: 5%;
 }
 
-.villain-text h3 {
-    font-family: "Montserrat", Arial, sans-serif;
-    font-size: 1.4rem;
-    margin-bottom: 0.8rem;
-}
-
-.villain-text p {
-    font-size: 1rem;
-}
-
-/* Clear floats in villain */
-.villain-wrapper::after {
-    content: "";
-    display: block;
-    clear: both;
-}
-
-/* Hashira box */
-.hashira-box h2 {
-    font-family: "Oswald", Arial, sans-serif;
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-}
-
-.hashira-content {
-    overflow: hidden;
-}
-
+/* HASHIRA */
 .hashira-image {
     float: left;
     width: 35%;
-    height: 15rem;
-    object-fit: cover;
-    border-radius: 0.6rem;
 }
 
 .hashira-content p {
     float: left;
     width: 55%;
     margin-left: 5%;
-    font-size: 1rem;
 }
 
-/* Clear floats in hashira */
-.hashira-content::after {
-    content: "";
-    display: block;
-    clear: both;
-}
-
-/* Episodes box */
-.episodes-box h2 {
-    font-family: "Oswald", Arial, sans-serif;
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-}
-
+/* EPISODES */
 .episodes-box p {
-    font-size: 1rem;
     margin-bottom: 1rem;
 }
 
-/* Gallery box */
-.gallery-box h2 {
-    font-family: "Oswald", Arial, sans-serif;
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-    text-align: center;
-}
-
+/* GALLERY */
 .gallery-row {
     text-align: center;
     margin-bottom: 1.5rem;
 }
 
 .gallery-image {
-    display: inline-block;
-    height: 15rem;
-    object-fit: cover;
     width: 20%;
     margin: 0 1%;
-    border-radius: 0.6rem;
-    margin-bottom: 1rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
 }
 
-/* Footer */
+/* FOOTER */
 .site-footer {
     background-color: #1a1a1a;
     text-align: center;
     padding: 1.5rem 5%;
     font-size: 0.9rem;
-    color: #f5f5f5;
 }
 
-/* Responsive tweaks */
+/* RESPONSIVE */
 @media (max-width: 60rem) {
-    .logo-area,
-    .title-area {
-        float: none;
-        width: 100%;
-        text-align: center;
-        padding: 0;
-    }
 
+    .logo-area,
+    .title-area,
     .hero-image-wrapper,
     .hero-text,
     .villain-image,
