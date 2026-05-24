@@ -128,7 +128,8 @@ body {
 
 .character-image {
     width: 100%;
-    height: auto;
+    height: 30rem;
+    object-fit: cover;
     border-radius: 0.6rem;
     margin-bottom: 1rem;
 }
@@ -157,6 +158,8 @@ body {
 .villain-image {
     float: left;
     width: 35%;
+    height: 15rem;
+    object-fit: cover;
     border-radius: 0.6rem;
 }
 
@@ -196,7 +199,9 @@ body {
 
 .hashira-image {
     float: left;
-    width: 40%;
+    width: 35%;
+    height: 15rem;
+    object-fit: cover;
     border-radius: 0.6rem;
 }
 
@@ -241,9 +246,14 @@ body {
 
 .gallery-image {
     display: inline-block;
-    width: 28%;
+    height: 15rem;
+    object-fit: cover;
+    width: 20%;
     margin: 0 1%;
     border-radius: 0.6rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 /* Footer */
